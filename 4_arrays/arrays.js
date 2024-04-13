@@ -128,6 +128,6 @@ console.log('posicion pais Venezuela: ' + countries.indexOf('Venezuela'));
 // Includes.- Nos revela si existe un elemento o no en un determinado Array. Se define al imprimir una variable con console.log(variable.includes(elemento)); Devuelve valor booleano: true (si se incluye el elemento en el array) o false (si no se incluye el elemento en el array)
 // Con los array de tipo objeto no funiona bien
 
-console.log('¿Existe el numero 20? ' numArray.includes(20));
-console.log('' ountries.includes('London'));
+console.log('¿Existe el numero 20? ' + numArray.includes(20));
+console.log('¿Existe el pais London? ' + countries.includes('London'));
 console.log(countries.includes('Costa Rica'));
