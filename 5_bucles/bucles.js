@@ -20,6 +20,22 @@ for (let i = 0; i < students.length; i++) {
 console.log('No hay más estudiantes');
 // Este 2º ejemplo parte de la variable i = 0, y hasta que termine el array (students.length), debe imprimir un valor más desde i
 
+let movies = [
+    'Harry Potter',
+    'Star Wars',
+    'Star Trek',
+    'El Señor de los Anillos',
+    'Scream',
+    'Dune',
+    'El Rey León'
+]
+
+console.log('Películas que empiezan por S del índice 2 al 5')
+for (let i = 2; i <= 5; i++) {
+    if (movies[i].charAt(0) === 'S') {
+        console.log(movies[i]);
+    }
+}
 
 // MÉTODO 2 : WHILE
 // Este método necesita definir la variable fuera del bucle.
@@ -48,8 +64,8 @@ do {
 
 
 // MÉTODO 3 : FOR - OF
-// Se utiliza para extraer los elementos de una variable array
-// Tiene una síntaxis mas sencilla. Se define con for (let nueva_variable of variable_array). 
+// Se utiliza para extraer los elementos de una variable array.
+// Es equivalente al método FOR, pero tiene una síntaxis mas sencilla. Se define con for (let nueva_variable of variable_array). 
 
 const animals = ['pajaro', 'perro', 'gato', 'pez', 'tortuga'];
 
