@@ -1,0 +1,9 @@
+.big {
+    font-size: 50px;
+    background-color: yellow;
+}
+
+.red {
+    color: tomato;
+    font-weight: bold;
+}

@@ -93,4 +93,11 @@ const availableProducts = products.filter((product) => {
 })
 console.log('Productos disponibles: ', availableProducts);
 
+// Se puede aplicar el método para filtrar con varias condiciones. Esto se hace mediante los operadores lógicos && (y lógico) y || (o lógico)
+
+const filterNumber = numbers.filter((number) => {
+    return number > 25 && number % 2 === 0;
+})
+console.log('Números >25 y pares: ', filterNumber);
+// En este caso el filtro es doble, se crea un array nuevo "filterNumber" con los números >25 y pares (para lo que utilizamos el operador módulo, al dividir el número entre 2, el resto debe ser 0). El operador lógico utilizado es && (y lógico)
 

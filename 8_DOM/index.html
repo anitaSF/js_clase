@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- En este caso el script que carga el archivo js se debería de cargar debajo del contenido del html (antes del cierre de la etiqueta de cierre del body </body>), ya que los navegadores leen de arriba abajo y si todavia no se han definido los elementos html no se puede ejecutar el js sobre nada.
+    Para solucionarlo, y colocar la etiqueta de enlace al js en el head, se le debe añadir el atributo "defer"
+     -->
+    <script defer src="dom.js"></script>
+    <script src="../9_eventos/event.js"></script>
+</head>
+
+<body>
+    <h1 id="title" class="text">Esto es el título</h1>
+    <div class="container">
+        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p class="text">Voluptate fugiat nobis quas odio hic amet?</p>
+    </div>
+
+</body>
+
+</html>
