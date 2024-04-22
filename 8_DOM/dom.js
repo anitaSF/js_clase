@@ -4,7 +4,8 @@ console.log('DOM!');
 // Estos elementos pueden ser modificados con JavaScript mediante métodos
 
 // SELECCIÓN DE ELEMENTOS HTML
-// Para poder modificar un elemento, debemos seleccionarlo mediante un objeto "document" asociado a un método que buscará en el documento los elementos asociados al Id, Class, TagName (etiqueta html), selector css... definido entre el párentesis
+// Para poder modificar un elemento, debemos seleccionarlo mediante un objeto "document" asociado a un método que buscará en el documento los elementos asociados al Id, Class, TagName (etiqueta html), selector css... definido entre el párentesis.
+// El elemento seleccionado lo alojaremos en una variable, normalmente constante "const"
 
 // getElementById()
 
@@ -40,11 +41,11 @@ console.log('Selección del elemento class = text con índice 0: ', h1Text);
 
 // querySelector()
 const titleElem = document.querySelector('#title');
-console.log(titleElem);
+console.log('Selección del elemento Id = title: ', titleElem);
 // Selecciona el elemento con id = title
 
 const h1TitleElem = document.querySelector('h1.text');
-console.log(h1TitleElem);
+console.log('Selección del elemento h1 con Id = title: ', h1TitleElem);
 // Selecciona el elemento h1 con class = text
 
 
@@ -74,6 +75,7 @@ titleElem.innerHTML = 'Nuevo Título';
 
 titleElem.setAttribute('id', 'patata');
 console.log('Nuevo atributo id para el h1: ', titleElem);
+// Se ha camibado al atributo id al elemento h1 titleElem (h1 id="patata")
 
 
 // classList.add('nuevaClase')
