@@ -10,7 +10,18 @@ title.addEventListener('click', () => {
     console.log('Soy un titulo clicado');
 })
 
+const btnDark = document.querySelector('#dark');
+const btnLight = document.querySelector('#ligth');
+console.log(btnDark, btnLight);
 
+const body = document.querySelector('body');
+
+btnDark.addEventListener('click', () => {
+    body.classList.add('dark');
+})
+btnLight.addEventListener('click', () => {
+    body.classList.remove('dark');
+})
 
 const btns = document.querySelectorAll('.btn');
 console.log(btns);
@@ -24,10 +35,15 @@ btns.forEach((btn) => {
 // De ha creado un bucle con el metodo forEach para definir un evento sobre cada uno de los elementos de la coleccion html obtenidos en un selector. Así nos ahorramos definir un evento para cada uno de los índices de la colección html.
 // Cada vez que se haga click sobre uno de los btn seleccionados en el html, se ejecuta el código del evento (en este caso mostrar una frase)
 
-const form = document.querySelector('form');
 const user = document.querySelector('#username');
 const submit = document.querySelector('#submit');
+const form = document.querySelector('form');
 console.log(form, user, submit);
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    console.log(user.value);
+})
 
 
 

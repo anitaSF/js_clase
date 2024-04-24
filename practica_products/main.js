@@ -18,7 +18,8 @@ const products = [
     }
 ]
 
-const productList = document.querySelector('.productlist');
+const productList = document.querySelector('.product-list');
+const shoppingCart = document.querySelector('.shopping-cart');
 
 // Creamos una funcion que englobe todos los métodos necesarios para crear los elementos html necesarios para mostrar un producto
 function addProduct(product) {
@@ -47,10 +48,15 @@ products.forEach((product) => {
     addProduct(product);
 })
 
-// Evento definido para mostrar en consola las propiedades de cada producto al hacer click sobre cada producto respectivamente (se ejecutará cualquier código que pongamos entre {})
+// Evento definido para ejecutar un código x al hacer click sobre cada producto. En este caso, mostrar en consola las propiedades, eliminar de la lista de productos, y añadir a la ul del carrito de la compra 
 const productItems = document.querySelectorAll('.product-items');
+
 productItems.forEach((item) => {
     item.addEventListener('click', () => {
         console.log(item);
+        // productList.removeChild(item);
+        shoppingCart.appendChild(item.cloneNode(true));
     })
 })
+
+// Si en vez de pasar el item de la <ul class=productList> a la <ul class=shoppingCart>, queremos que se mantenga en ambas, usaremos el método para clonar nodo (item.cloneNode(true))
