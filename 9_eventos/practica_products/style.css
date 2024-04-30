@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: aqua;
+    height: 100px;
+
+    .nav {
+        height: 100%;
+
+        .nav-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+        }
+    }
+}
+
+.product-list {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+
+    .product-items {
+        padding-left: 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .available {
+            color: blue;
+        }
+
+        .unavailable {
+            color: red;
+            text-decoration: line-through;
+        }
+    }
+
+
+}
