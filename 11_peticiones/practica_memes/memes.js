@@ -3,6 +3,7 @@ console.log('memes!');
 // Seleccionamos la lista <ul class = meme-list></ul> para generar sus elementos
 const memeList = document.querySelector('.meme-list');
 
+// Definimos una función para crear los elememtos html que muestren los datos extraidos en la función async. Damos un argumento (en este caso 'meme', aunque puede ser cualquiera que defina la información a mostrar). Este argumento lo usaremos para definir el contenido de cada elemento html creado (por ej. "meme.id", "meme.name"...)
 function addMemeItem(meme) {
     const li = document.createElement('li');
     li.setAttribute('id', meme.id); // Creamos elemento <li></li> y asignamos el atributo "id" que será la propiedada "id" del meme (array objeto importado)
@@ -52,8 +53,10 @@ const quantityInput = document.querySelector('#quantity');
 
 memesForm.addEventListener('submit', (e) => {
     e.preventDefault(); // Método para evitar el comportamiento que tienen por defecto los formularios de recargarse automáticamente al clicar el button e impedir que se ejecute el código definido al clicarlo
-    const start = startInput.value; // Seleccionamos el valor introducido en el input "#start"
-    const quantity = quantityInput.value; // Seleccionamos el valor introducido en el input "#quantity"
+    const start = Number(startInput.value); // Seleccionamos el valor introducido en el input "#start"
+    const quantity = Number(quantityInput.value); // Seleccionamos el valor introducido en el input "#quantity"
+
+    // Hay que convertir los valores introducidos en los input (por defecto son de tipo string) en numéricos, de ahí introducir el valor de la variable entre el método Number().
 
     console.log('start: ', start, 'quantity: ', quantity);
     memeList.innerHTML = ""; // Borramos el contenido de memes mostrado en la selección previa, antes de mostrar la nueva seleccion
