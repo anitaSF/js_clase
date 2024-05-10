@@ -49,6 +49,7 @@ products.forEach((product) => {
 })
 // Por cada elemento (product) definido en el parámetro de la Array Function, extrae la propiedad del array objeto "productName" de cada uno de ellos
 
+
 // MÉTODO map()
 // Es un método que construye nuevos arrays a partir de elementos de otro array, bien modificados por el código que ejecuta el return, bien igual (crea una copia)
 // Para ello, necesitamos crar una nueva variable array que guarde el resultado del código ejecutado por el método: const nombre_nuevoArray = array.map(callback)
@@ -77,6 +78,14 @@ const productsWithIva = products.map((product) => {
 })
 console.log('Precio con IVA de products ', productsWithIva);
 // Crea un nuevo array objeto, copia del array "products", pero con su propiedad "price" multiplicada por 1.21 para añadirle el IVA. Para guardar esta nueva propiedad tenemos que crer una nueva varible dentro del callback "newPrice", que usaremos para definir la propiedad del array anterior "price"
+
+
+// SPREAD OPERATOR
+// Sirve también para crear copias de un array. Se define con "..." delante del array original: nuevo_array = original_array[...]
+
+const studentCopy2 = [...students];
+console.log('Copia array students con spread operator: ', studentCopy2);
+
 
 // METODO filter()
 // Es un método que construye nuevos arrays a partir de elementos de otro array que cumplan una condición definida por el return. Esta es la diferencia con el anterior metodo map()

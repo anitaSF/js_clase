@@ -6,14 +6,14 @@ console.log('Arrays!');
 // Array tipo numerico
 const numArray = [10, 20, 30, 40];
 
-console.log(numArray);
-console.log(numArray[3]); //Muestra el elemento en 3ª posición (40), ya que empieza a conar por 0.
+console.log('Array numérico', numArray);
+console.log('numero con índice 3: ', numArray[3]); // Para acceder a un elemento de un array se debe llamar mediante su índice, indicándolo entre corchetes: array[i]. La primera posición por defecto es [0]
 
 // Array tipo string
 const countries = ['Spain', 'Mexico', 'Francia', 'Italia'];
 
-console.log(countries);
-console.log(countries[0]);
+console.log('Array string paises: ', countries);
+console.log('Pais con índice 3: ', countries[0]);
 
 // Array tipo objeto.- todos los elementos tienen la misma estructura de datos
 const products = [
@@ -34,74 +34,100 @@ const products = [
     },
 ]
 
-console.log(products);
-console.log(products[2]);
+console.log('Array objeto productos: ', products);
+console.log('Producto con índice 2: ', products[2]);
+
+// Modificar valores de una propiedad.
+// Se llama al elemento mediante su índice y se le asigna un nuevo valor: array[i] = 'nuevo_valor'
+const cars = ['Saab', 'Volvo', 'BMW'];
+console.log('Listado coches: ', cars);
+
+cars[0] = 'Seat';
+console.log('Cambio coche Saab por Seat: ', cars);
+
+// Podemos mostrar los elementos de un array solo con sus valores, sin estructura array. Para ello, lo llamamos con "..." delante del array
+
+console.log('Paises sin estructura array: ', ...countries);
+
 
 // METODOS ARRAY
 
-// Push.- sirve para añadir elementos a un array. Se define con la variable.push(nuevo_elemento);
-numArray.push(50);
-console.log(numArray);
+// LENGHT.- sirve para sacar el número de elementos que compone una variable tipo Array. Se define al imprimir la variable con console.log(variable.length());
+console.log('Elementos numéricos:', + numArray.length);
+console.log('Paises elegidos: ' + countries.length);
+console.log('Productos disponibles: ' + products.length);
 
-countries.push('EEUU');
-console.log(countries);
+// Para acceder al último elemento de una variable array, si no conocemos cuantos elementos tiene, se puede hacer con este método y se le resta 1: array.lenght -1
+const ultimoPais = countries.length - 1;
+console.log('Último elemento array paises: ', ultimoPais);
+
+
+// PUSH.- sirve para añadir elementos al final de un array. Se define con la variable.push(nuevo_elemento);
+numArray.push(50);
+console.log('Añadir elemento numerico al final: ', numArray);
+
+// Se pueden añadir más de un elemento, separando por comas
+countries.push('EEUU', 'Germany');
+console.log('Añadir 2 paises al array string al final: ', countries);
 
 products.push({
     productName: 'ring',
     price: 100,
     isForSale: true
 })
-console.log(products);
+console.log('Añadir producto al array objeto al final: ', products);
 
-// Length.- sirve para sacar el número de elementos que compone una variable tipo Array. Se define al imprimir la variable con console.log(variable.length());
-console.log('Elementos numéricos:', + numArray.length);
-console.log('Paises elegidos: ' + countries.length);
-console.log('Productos disponibles: ' + products.length);
 
-// Pop.- elimina el último elemento de un Array. Se define al imprimir la variable con console.log(variable.pop()); 
+
+// POP.- elimina el último elemento de un Array. Se define al imprimir la variable con console.log(variable.pop()); 
 numArray.pop();
-console.log(numArray);
+console.log('Eliminado ultimo elemento numerico: ', numArray);
 
 countries.pop();
-console.log(countries);
+console.log('Eliminado ultimo pais: ', countries);
 
 products.pop();
-console.log(products);
+console.log('Eliminado ultimo producto: ', products);
 
-// Unshift.- añade elementos al principio de un array. Se define con la variable.unsifht(nuevo:elemento);
+
+// UNSHIFT.- añade elementos al principio de un array. Se define con la variable.unsifht(nuevo:elemento);
 numArray.unshift(00);
-console.log(numArray);
+console.log('Añadir elemento numerico al inicio: ', numArray);
 
 countries.unshift('Venezuela');
-console.log(countries);
+console.log('Añadir 1 pais al array string al inicio: ', countries);
 
 products.unshift({
     productName: 'car',
     price: 500,
     isForSale: false
 })
-console.log(products);
+console.log('Añadir 1 producto al array objeto al inicio: ', products);
 
-// Shift.- elimina el primer elemento de un Array. Se define con la variable.shift(); al imprimirla en pantalla
 
-// Splice.- elimina y añade elementos en una determinada posición. Se define con la variable.splice(posición_elemento_ref, elemento_eliminarAPartirDeLaRef, elemento_añadirAPartirDeLaRef)
-numArray.splice(1, 2, 99);
-console.log(numArray);
+// SHIFT.- elimina el primer elemento de un Array. Se define con la variable.shift(); al imprimirla en pantalla
 
+
+// SPLICE.- elimina y/o añade elementos en una determinada posición. Se define con la variable.splice(indice_elem_eliminar, cantidad_elem_eliminar). 
+numArray.splice(1, 2);
+console.log('Eliminado 2 elementos a partir del indice 1: ', numArray);
+
+// Para añadir un elemento nuevo, se inserta en último lugar dentro del paréntesis variable.splice(indice_elem_eliminar, cantidad_elem_eliminar, nuevo elemento)
 countries.splice(2, 1, 'London');
-console.log(countries);
+console.log('Eliminado 1 pais a partir del indice 2 + añado nuevo pais: ', countries);
 
-// Reverse.- muestra los elementos en orden inverso al introducido. Se define al imprimir la variable con variable.reverse();
-console.log(countries.reverse());
 
-// Concat.- une los elementos de diferentes Arrays. Se define con variable1.concat(variable2)
+// REVERSE.- muestra los elementos en orden inverso al introducido. Se define al imprimir la variable con variable.reverse();
+console.log('Mostrar elementos array orden inverso', countries.reverse());
 
+
+// CONCAT.- une los elementos de diferentes Arrays. Se define con variable1.concat(variable2)
 const number = [75, 85, 95];
-
 const allNumber = numArray.concat(number);
-console.log(allNumber);
+console.log('Unir elementos 2 array; ', allNumber);
 
-// Slice.- Muestra los elementos a partir de la posición indicada con console.log(variable.slice(2));, o entre dos posiciones indicadas si se muestran dos valores con console.log(variable.slice(1, 4));
+
+// SLICE.- Muestra los elementos a partir de la posición indicada con console.log(variable.slice(2));, o entre dos posiciones indicadas si se muestran dos valores con console.log(variable.slice(1, 4));
 
 console.log(numArray);
 console.log(numArray.slice(2));
@@ -109,10 +135,12 @@ console.log(numArray.slice(2));
 console.log(countries);
 console.log(countries.slice(1, 3));
 
-// Join.- Muestra los elementos de un array separados por el caracter que introduczcamos entre comillas. Se define al imprimir la variable con console.log(variable.join("-"));
-console.log(numArray.join(" / "));
-console.log(countries.join(" -- "));
-console.log(products.join(" | "));
+
+// JOIN.- Muestra los elementos de un array separados por el caracter que introduczcamos entre comillas. Se define al imprimir la variable con console.log(variable.join("-"));
+console.log('Elementos numericos separados por / ', numArray.join(" / "));
+console.log('Paises separados por -- ', countries.join(" -- "));
+console.log('Productos separados por | ', products.join(" | "));
+
 
 // indexOf.- Da la posición que tiene un determinado elemento. Se define al imprimir una variable con console.log(variable.indexOf(elemento)); 
 // Si buscamos un elemento que no existe en el Array devuelve el valor -1

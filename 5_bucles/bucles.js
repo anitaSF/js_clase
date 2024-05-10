@@ -116,10 +116,11 @@ const book = {
     pages: 100
 }
 
+// Para cada propiedad ('key') del array ('book') ejecuta el código ('mostrar por consola'):
 console.log('Propiedades de los libros')
 for (let key in book) {
-    console.log(key);
-    console.log(book[key]);
+    console.log(key); // Muestra propiedades
+    console.log(book[key]); // Muestra el valor de cada propiedad. Para ello se define con el array y la varible creada para las propiedades entre []: (array[key])
 }
 
 // METODO BUCLE - FOREACH 
