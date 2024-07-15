@@ -64,7 +64,7 @@ do {
 
 
 // MÉTODO 3 : FOR - OF
-// Se utiliza para extraer los elementos de una variable array.
+// Se utiliza para extraer los elementos de una variable array. No sirve para trabajar con propiedades de arrays de objetos. Para ello utilizamos FOR - IN
 // Es equivalente al método FOR, pero tiene una síntaxis mas sencilla. Se define con for (let nueva_variable of variable_array). 
 
 const animals = ['pajaro', 'perro', 'gato', 'pez', 'tortuga'];
